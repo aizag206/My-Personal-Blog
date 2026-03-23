@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ahmad Zaghloul — front-end developer portfolio.">
+    <title>Ahmad Zaghloul | Front-end Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Source+Sans+Pro:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-spy="scroll" data-target="#navbarNavAltMarkup" data-offset="80">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div id="settings-backdrop" class="settings-backdrop" aria-hidden="true"></div>
+    <aside id="settings-panel" class="settings-panel" aria-hidden="true">
+        <div class="settings-panel-inner">
+            <h2>Site settings</h2>
+            <label for="theme-toggle-btn">Theme</label>
+            <button type="button" id="theme-toggle-btn" class="btn btn-outline-secondary btn-block">Switch to dark mode</button>
+            <label>Accent color</label>
+            <div class="accent-swatches">
+                <button type="button" class="accent-swatch active" data-accent="#ff206e" style="background-color:#ff206e" aria-label="Pink"></button>
+                <button type="button" class="accent-swatch" data-accent="#206eff" style="background-color:#206eff" aria-label="Blue"></button>
+                <button type="button" class="accent-swatch" data-accent="#00b894" style="background-color:#00b894" aria-label="Teal"></button>
+                <button type="button" class="accent-swatch" data-accent="#9b59b6" style="background-color:#9b59b6" aria-label="Purple"></button>
+            </div>
+            <button type="button" id="settings-close" class="btn btn-secondary btn-block">Close</button>
+        </div>
+    </aside>
+
+    <nav id="site-nav" class="navbar navbar-expand-lg navbar-light bg-white shadow-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand color-main font-weight-bold" href="#home">A Z</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav font-big ml-auto">
+                    <a class="nav-link ml-3 mr-2" href="#home">Home</a>
+                    <a class="nav-link mr-2" href="#profile">Profile</a>
+                    <a class="nav-link mr-2" href="#about">About</a>
+                    <a class="nav-link mr-2" href="#services">Services</a>
+                    <a class="nav-link mr-2" href="#contact">Contact</a>
+                    <a class="nav-link mr-2" href="#testimonials">Testimonials</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <header id="home" class="hero-home d-flex align-items-center justify-content-center">
+            <div class="header-items text-white pl-3 pr-3 text-center">
+                <h4 class="hero-el hero-el--1">Welcome</h4>
+                <h1 class="hero-el hero-el--2">I'M </h1>
+                <p class="hero-el hero-el--3 text-muted">Development, and web design, Automotive</p>
+                <div class="icon-panel hero-el hero-el--4 d-flex justify-content-center flex-wrap">
+                    <a href="https://www.facebook.com/ahmed.h.zaghloul" target="_blank" rel="noopener noreferrer" class="btn icon mr-3 mb-2 d-flex justify-content-center align-items-center rounded-circle text-primary bg-light" aria-label="Facebook profile">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://x.com/Psychopath206" target="_blank" rel="noopener noreferrer" class="btn icon mr-3 mb-2 d-flex justify-content-center align-items-center rounded-circle text-dark bg-light" aria-label="X profile">
+                        <i class="fab fa-x-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ahmedzaghloul82/" target="_blank" rel="noopener noreferrer" class="btn icon mr-3 mb-2 d-flex justify-content-center align-items-center rounded-circle text-danger bg-light" aria-label="Instagram profile">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ahmed-zaghloul-63382217a/" target="_blank" rel="noopener noreferrer" class="btn icon mr-3 mb-2 d-flex justify-content-center align-items-center rounded-circle text-primary bg-light" aria-label="LinkedIn profile">
+                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <p class="hero-el hero-el--5 mt-3 mb-0">
+                    <a class="btn btn-light color-main font-weight-bold hero-cta-btn" href="https://drive.google.com/file/d/1Zd37WsCbJU1fCcUhqG4SfIsA_d3uQ24M/view?usp=share_link" target="_blank" rel="noopener noreferrer">View portfolio</a>
+                </p>
+            </div>
+            <a href="#profile" id="hero-scroll-hint" class="hero-scroll-hint" aria-label="Scroll to profile section">
+                <span class="hero-scroll-hint__mouse" aria-hidden="true">
+                    <span class="hero-scroll-hint__wheel"></span>
+                </span>
+                <span class="hero-scroll-hint__label">Scroll</span>
+            </a>
+            <div class="fixed-icons">
+                <button type="button" id="settings-toggle" class="settings-toggle position-fixed" aria-expanded="false" aria-controls="settings-panel" title="Open site settings">
+                    <i class="fa-solid fa-gear text-white" aria-hidden="true"></i>
+                </button>
+                <a href="#home" id="scroll-up-btn" class="up-icon position-fixed" aria-label="Back to top">
+                    <i class="fa-solid fa-chevron-up text-white" aria-hidden="true"></i>
+                </a>
+            </div>
+        </header>
+
+        <section id="profile" class="py-2 reveal-on-scroll">
+            <div class="container py-5 text-center">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="Photos/83992641.png" class="w-100 rounded-circle mb-4" alt="Portrait of Ahmad Zaghloul">
+                        <h3>Name</h3>
+                        <p class="lead">Ahmad Zaghloul</p>
+                        <h3>Phone</h3>
+                        <p class="lead"><a href="tel:+201092472433" aria-label="Call Ahmad Zaghloul">+20 109 247 2433</a></p>       
+                        <h3>Email</h3>
+                        <p class="lead"><a href="mailto:azaghloul206@gmail.com" aria-label="Send email to Ahmad Zaghloul">azaghloul206@gmail.com</a></p>
+                        <h3>Location</h3>
+                        <p class="lead">Cairo, Egypt</p>
+                    </div>
+                    <div class="col-md-9 text-center">
+                        <h2 class="color-main">Front‑End Developer & AI‑Assisted Software Builder</h2>
+                        <p class="lead mb-5">Front‑end developer who also builds complete software solutions using modern AI tools to accelerate development, prototype ideas quickly, and deliver practical digital products. My background in customer communication and automotive consulting strengthens my ability to understand real client needs and translate them into effective web solutions.</p>
+                        <div class="row text-center">
+                            <div class="col-md-12 mb-5">
+                                <i class="fa-solid fa-laptop-code fa-2x mb-2" aria-hidden="true"></i>
+                                <h3>Core Skills</h3>
+                                <div class="line-break mb-3"></div>
+                                <p class="lead">HTML • CSS • JavaScript • Bootstrap • Responsive Design • Git • AI‑assisted development workflows • Rapid UI prototyping</p>
+                            </div>
+
+                            <div class="col-md-4 mb-4">
+                                <i class="fa-solid fa-graduation-cap fa-2x mb-2" aria-hidden="true"></i>
+                                <h3>Education</h3>
+                                <div class="line-break mb-3"></div>
+                                <p class="lead">Bachelor’s Degree in Management Information Systems</p>
+                                <p class="text-muted">El‑Shorouk Academy</p>
+                            </div>
+
+                            <div class="col-md-4 mb-4">
+                                <i class="fa-solid fa-code fa-2x mb-2" aria-hidden="true"></i>
+                                <h3>Technical Training</h3>
+                                <div class="line-break mb-3"></div>
+                                <p class="lead">Full‑Stack Web Development Program</p>
+                                <p class="text-muted">Route IT Training Center</p>
+                                <p class="text-muted">Built responsive UI projects using HTML, CSS, JavaScript, and Bootstrap</p>
+                            </div>
+
+                            <div class="col-md-4 mb-4">
+                                <i class="fa-solid fa-briefcase fa-2x mb-2" aria-hidden="true"></i>
+                                <h3>Professional Background</h3>
+                                <div class="line-break mb-3"></div>
+                                <p class="lead">Automotive consulting & customer solutions</p>
+                                <p class="text-muted">Experience understanding client needs and translating them into practical digital solutions</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-4 text-center reveal-on-scroll">
+            <div class="title text-center position-relative d-flex justify-content-center align-items-center">
+                <h2 class="mb-0">ABOUT</h2>
+                <h3 class="position-absolute mb-0">ABOUT</h3>
+            </div>
+            <p class="lead my-3">Software developer with automotive industry experience</p>
+            <div class="container-fluid mt-5">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="Photos/pp.jpg" class="w-100" alt="Workspace and creative setup">
+                    </div>
+                    <div class="col-md-8 text-left d-flex align-items-center">
+                        <div class="about-content">
+                            <h5>Ahmad Zaghloul</h5>
+                            <p class="lead color-main">Front‑End Developer & AI‑Assisted Software Builder with automotive industry experience</p>
+                            <p class="lead text-muted">Front‑end developer who also builds complete software solutions using modern AI tools to accelerate development, prototype ideas quickly, and deliver practical digital products. My background in customer communication and automotive consulting strengthens my ability to understand real client needs and translate them into effective web solutions.</p>
+                            <p class="lead text-muted">Currently, I am expanding my knowledge in software development and various AI tools through hands‑on projects, building practical digital solutions and improving my ability to deliver complete software experiences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-5 reveal-on-scroll">
+            <div class="title text-center position-relative d-flex justify-content-center align-items-center">
+                <h2 class="mb-0">SERVICES</h2>
+                <h3 class="position-absolute mb-0">SERVICES</h3>
+            </div>
+            <p class="lead text-center my-4">What I can help you with</p>
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <i class="fa-solid fa-code fa-2x color-main mb-3"></i>
+                                <h4 class="card-title">Front-End Interfaces</h4>
+                                <p class="card-text text-muted">Responsive landing pages, portfolio sites, and clean UI layouts built with modern HTML, CSS, JavaScript, and Bootstrap.</p>
+                                <a href="#contact" class="btn main-background-color text-white">Start a project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <i class="fa-solid fa-robot fa-2x color-main mb-3"></i>
+                                <h4 class="card-title">AI‑Assisted Software Solutions</h4>
+                                <p class="card-text text-muted">Rapid prototyping and development of complete web tools using modern AI workflows to turn ideas into working digital products faster.</p>
+                                <a href="#contact" class="btn main-background-color text-white">Discuss your idea</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <i class="fa-solid fa-gauge-high fa-2x color-main mb-3"></i>
+                                <h4 class="card-title">Website Optimization</h4>
+                                <p class="card-text text-muted">Improve layout structure, performance, usability, and add small features to upgrade existing websites quickly and effectively.</p>
+                                <a href="#contact" class="btn main-background-color text-white">Improve your site</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5 reveal-on-scroll">
+            <div class="title text-center position-relative d-flex justify-content-center align-items-center">
+                <h2 class="mb-0">CONTACT</h2>
+                <h3 class="position-absolute mb-0">CONTACT</h3>
+            </div>
+            <p class="lead text-center my-4">Send a message — your email app will open with the text ready to send.</p>
+            <div class="container" style="max-width: 560px;">
+                <form id="contact-form" class="text-left" novalidate>
+                    <div class="form-group"><label for="contact-name">Name</label><input type="text" class="form-control" id="contact-name" required></div>
+                    <div class="form-group"><label for="contact-email">Email</label><input type="email" class="form-control" id="contact-email" required></div>
+                    <div class="form-group"><label for="contact-message">Message</label><textarea class="form-control" id="contact-message" rows="5" required></textarea></div>
+                    <button type="submit" class="btn main-background-color text-white btn-block">Send via email</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials py-5 reveal-on-scroll">
+            <div class="title text-center position-relative d-flex justify-content-center align-items-center">
+                <h2 class="mb-0">TESTIMONIALS</h2>
+                <h3 class="position-absolute mb-0">TESTIMONIALS</h3>
+            </div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item text-center active">
+                        <div class="rounded-circle shadow d-inline-flex align-items-center justify-content-center" style="width:90px;height:90px;background:#f5f5f5;">
+                            <i class="fa-solid fa-graduation-cap fa-2x text-secondary"></i>
+                        </div>
+                        <div class="client-feedback w-75 m-auto p-3">
+                            <h4 class="mt-5">Technical Training Performance</h4>
+                            <span class="text-muted">Route IT Training Center</span>
+                            <p class="lead py-2">Demonstrated strong commitment during the full‑stack development program and successfully delivered responsive UI assignments using HTML, CSS, and JavaScript.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item text-center">
+                        <div class="rounded-circle shadow d-inline-flex align-items-center justify-content-center" style="width:90px;height:90px;background:#f5f5f5;">
+                            <i class="fa-solid fa-headset fa-2x text-secondary"></i>
+                        </div>
+                        <div class="client-feedback w-75 m-auto p-3">
+                            <h4 class="mt-5">Customer Communication</h4>
+                            <span class="text-muted">Vodafone Egypt</span>
+                            <p class="lead py-2">Recognized for clear problem‑solving communication and the ability to guide customers through technical issues efficiently in fast‑paced support environments.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item text-center">
+                        <div class="rounded-circle shadow d-inline-flex align-items-center justify-content-center" style="width:90px;height:90px;background:#f5f5f5;">
+                            <i class="fa-solid fa-store fa-2x text-secondary"></i>
+                        </div>
+                        <div class="client-feedback w-75 m-auto p-3">
+                            <h4 class="mt-5">Consultative Product Guidance</h4>
+                            <span class="text-muted">Telecom Stores</span>
+                            <p class="lead py-2">Helped customers evaluate technical options and select suitable devices and plans, strengthening user‑needs analysis now applied to digital product experiences.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item text-center">
+                        <div class="rounded-circle shadow d-inline-flex align-items-center justify-content-center" style="width:90px;height:90px;background:#f5f5f5;">
+                            <i class="fa-solid fa-car fa-2x text-secondary"></i>
+                        </div>
+                        <div class="client-feedback w-75 m-auto p-3">
+                            <h4 class="mt-5">Sales Leadership & Automotive Consulting</h4>
+                            <span class="text-muted">Egytrade Automotive</span>
+                            <p class="lead py-2">Led client consultations and coordinated sales processes for imported vehicles from Germany, helping customers evaluate specifications, pricing structures, and delivery timelines while improving decision confidence and closing efficiency.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item text-center">
+                        <div class="rounded-circle shadow d-inline-flex align-items-center justify-content-center" style="width:90px;height:90px;background:#f5f5f5;">
+                            <i class="fa-solid fa-laptop-code fa-2x text-secondary"></i>
+                        </div>
+                        <div class="client-feedback w-75 m-auto p-3">
+                            <h4 class="mt-5">Custom Software Project Delivery</h4>
+                            <span class="text-muted">Private Client Project</span>
+                            <p class="lead py-2">Designed and delivered a tailored software solution using AI‑assisted development workflows to transform client requirements into a working digital tool with structured interface logic and practical usability.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev border-0" type="button" data-target="#carouselExampleIndicators" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></button>
+                <button class="carousel-control-next border-0" type="button" data-target="#carouselExampleIndicators" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
