@@ -25,7 +25,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Source Sans Pro', sans-serif; }
 }
 
 #home{position:relative;overflow:hidden;min-height:calc(100vh - 76px);height:calc(100vh - 76px);background:#1a1a2e}
-#home::before{content:'';position:absolute;inset:-6%;z-index:0;background-image:linear-gradient(rgba(0,0,0,.52),rgba(0,0,0,.42)),url(../Photos/Ahmad1.jpeg);background-size:cover;background-position:center;animation:heroKenBurns 22s ease-in-out infinite alternate}
+#home::before{content:'';position:absolute;inset:-6%;z-index:0;background-image:linear-gradient(rgba(0,0,0,.52),rgba(0,0,0,.42)),url(../Photos/yuvraj-singh-parmar-Dbc2-AA-e3E-unsplash.jpg);background-size:cover;background-position:center;animation:heroKenBurns 22s ease-in-out infinite alternate}
 #home .header-items{position:relative;z-index:2}
 #home .text-muted{color:rgba(255,255,255,.78)!important}
 header h1{font-weight:800;font-size:48px}
@@ -58,8 +58,28 @@ header h1{font-weight:800;font-size:48px}
 
 .title h2{font-size:80px;font-weight:900;color:#f1f1f1}.title h3{font-size:40px;font-weight:900;color:#000}
 .font-big a{font-size:larger}
-.carousel-item img{width:100px;border:solid 2px #fff;transform:translateY(50%)} .carousel-item span{font-size:larger}
+.carousel-item img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
 .client-feedback{border:solid 2px #f1f1f1}
+
+.testimonial-logo-wrapper{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#f5f5f5;
+    margin:auto;
+}
+
+.testimonial-logo-wrapper img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+    display:block;
+}
 
 .settings-panel{position:fixed;top:0;left:0;width:min(320px,92vw);height:100vh;background:#fff;box-shadow:4px 0 24px rgba(0,0,0,.12);z-index:10001;transform:translateX(-100%);transition:transform .3s ease}
 .settings-panel.is-open{transform:translateX(0)}
