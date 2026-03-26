@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Ahmad Zaghloul — front-end developer portfolio.">
+    <meta name="description" content="Ahmad Zaghloul portfolio featuring front-end development, AI-assisted software workflows, and digital product implementation.">
     <title>Ahmad Zaghloul | Front-end Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,7 +72,8 @@
                     </a>
                 </div>
                 <p class="hero-el hero-el--5 mt-3 mb-0">
-                    <a class="btn btn-light color-main font-weight-bold hero-cta-btn" href="https://drive.google.com/file/d/1Zd37WsCbJU1fCcUhqG4SfIsA_d3uQ24M/view?usp=share_link" target="_blank" rel="noopener noreferrer">View portfolio</a>
+                    <a class="btn btn-light color-main font-weight-bold hero-cta-btn mr-sm-3 mb-3 mb-sm-0" href="https://drive.google.com/file/d/1Zd37WsCbJU1fCcUhqG4SfIsA_d3uQ24M/view?usp=share_link" target="_blank" rel="noopener noreferrer">View portfolio</a>
+                    <a class="btn btn-outline-light font-weight-bold hero-cta-btn" href="#contact">Start a conversation</a>
                 </p>
             </div>
             <a href="#profile" id="hero-scroll-hint" class="hero-scroll-hint" aria-label="Scroll to profile section">
@@ -148,7 +149,7 @@
                                 <i class="fa-solid fa-briefcase fa-2x mb-2" aria-hidden="true"></i>
                                 <h3>Professional Background</h3>
                                 <div class="line-break mb-3"></div>
-                                <p class="lead">Automotive consulting & customer solutions & Leadership</p>
+                                <p class="lead">Automotive consulting, customer solutions, and team leadership</p>
                                 <p class="text-muted">Egytrade Automotive</p>
                                 <p class="text-muted">Experience leading client consultations, analyzing requirements, and translating complex purchasing workflows into structured solution decisions now applied to digital product development</p>
                             </div>
@@ -240,12 +241,24 @@
                 <h2 class="mb-0">CONTACT</h2>
                 <h3 class="position-absolute mb-0">CONTACT</h3>
             </div>
-            <p class="lead text-center my-4">Send a message — your email app will open with the text ready to send.</p>
+            <p class="lead text-center my-4">Send a message and your email app will open with the details ready to review.</p>
             <div class="container" style="max-width: 560px;">
-                <form id="contact-form" class="text-left" novalidate>
-                    <div class="form-group"><label for="contact-name">Name</label><input type="text" class="form-control" id="contact-name" required></div>
-                    <div class="form-group"><label for="contact-email">Email</label><input type="email" class="form-control" id="contact-email" required></div>
-                    <div class="form-group"><label for="contact-message">Message</label><textarea class="form-control" id="contact-message" rows="5" required></textarea></div>
+                <form id="contact-form" class="text-left">
+                    <div class="form-group">
+                        <label for="contact-name">Name</label>
+                        <input type="text" class="form-control" id="contact-name" name="name" autocomplete="name" required>
+                        <div class="invalid-feedback">Please enter your name.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email</label>
+                        <input type="email" class="form-control" id="contact-email" name="email" autocomplete="email" required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea class="form-control" id="contact-message" name="message" rows="5" required></textarea>
+                        <div class="invalid-feedback">Please add a short message.</div>
+                    </div>
                     <button type="submit" class="btn main-background-color text-white btn-block">Send via email</button>
                 </form>
             </div>
@@ -263,11 +276,12 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
                 </ol>
                     <div class="carousel-inner">
                     <div class="carousel-item text-center active">
-                        <div class="rounded-circle shadow d-inline-flex align-items-center justify-content-center" style="width:90px;height:90px;background:#f5f5f5;overflow:hidden;">
-                            <img src="Photos/Route logo.jpg" alt="Route IT Training Center" class="w-100 h-100" style="object-fit:cover;">
+                        <div class="testimonial-logo-wrapper shadow">
+                            <img src="Photos/Route logo.jpg" alt="Route IT Training Center" class="w-100 h-100">
                         </div>
                         <div class="client-feedback w-75 m-auto p-3">
                             <h4 class="mt-5">Technical Training Performance</h4>
@@ -277,8 +291,8 @@
                     </div>
 
                     <div class="carousel-item text-center">
-                        <div class="rounded-circle shadow d-inline-flex align-items-center justify-content-center" style="width:90px;height:90px;background:#f5f5f5;overflow:hidden;">
-                            <img src="Photos/Vodafone logo.jpg" alt="Vodafone Egypt" class="w-100 h-100" style="object-fit:cover;">
+                        <div class="testimonial-logo-wrapper shadow">
+                            <img src="Photos/Vodafone logo.jpg" alt="Vodafone Egypt" class="w-100 h-100">
                         </div>
                         <div class="client-feedback w-75 m-auto p-3">
                             <h4 class="mt-5">Customer Communication</h4>
@@ -288,7 +302,7 @@
                     </div>
 
                     <div class="carousel-item text-center">
-                        <div class="rounded-circle shadow d-inline-flex align-items-center justify-content-center" style="width:90px;height:90px;background:#f5f5f5;">
+                        <div class="testimonial-logo-wrapper shadow">
                             <i class="fa-solid fa-store fa-2x text-secondary"></i>
                         </div>
                         <div class="client-feedback w-75 m-auto p-3">
@@ -299,8 +313,8 @@
                     </div>
 
                     <div class="carousel-item text-center">
-                        <div class="rounded-circle shadow d-inline-flex align-items-center justify-content-center" style="width:90px;height:90px;background:#f5f5f5;overflow:hidden;">
-                            <img src="Photos/Egytrade logo.jpg" alt="Egytrade Automotive" class="w-100 h-100" style="object-fit:cover;">
+                        <div class="testimonial-logo-wrapper shadow">
+                            <img src="Photos/Egytrade logo.jpg" alt="Egytrade Automotive" class="w-100 h-100">
                         </div>
                         <div class="client-feedback w-75 m-auto p-3">
                             <h4 class="mt-5">Sales Leadership & Automotive Consulting</h4>
@@ -310,8 +324,8 @@
                     </div>
 
                     <div class="carousel-item text-center">
-                        <div class="rounded-circle shadow d-inline-flex align-items-center justify-content-center" style="width:90px;height:90px;background:#f5f5f5;overflow:hidden;">
-                            <img src="Photos/Catalyst logo .jpg" alt="Catalyst AI" class="w-100 h-100" style="object-fit:cover;">
+                        <div class="testimonial-logo-wrapper shadow">
+                            <img src="Photos/Catalyst logo .jpg" alt="Catalyst AI" class="w-100 h-100">
                         </div>
                         <div class="client-feedback w-75 m-auto p-3">
                             <h4 class="mt-5">Technical training performance</h4>
@@ -321,7 +335,7 @@
                     </div>
 
                     <div class="carousel-item text-center">
-                        <div class="rounded-circle shadow d-inline-flex align-items-center justify-content-center" style="width:90px;height:90px;background:#f5f5f5;">
+                        <div class="testimonial-logo-wrapper shadow">
                             <i class="fa-solid fa-laptop-code fa-2x text-secondary"></i>
                         </div>
                         <div class="client-feedback w-75 m-auto p-3">

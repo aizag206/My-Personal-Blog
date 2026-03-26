@@ -1,14 +1,6 @@
 (function () {
   'use strict';
 
-  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-  function scrollToTopIfNoHash() {
-    if (!window.location.hash || window.location.hash === '#') window.scrollTo(0, 0);
-  }
-  scrollToTopIfNoHash();
-  window.addEventListener('load', scrollToTopIfNoHash);
-  window.addEventListener('pageshow', function (e) { if (e.persisted) scrollToTopIfNoHash(); });
-
   var ACCENT_KEY = 'site-accent';
   var THEME_KEY = 'site-theme';
   var root = document.documentElement;
@@ -84,9 +76,18 @@
       var name = document.getElementById('contact-name');
       var email = document.getElementById('contact-email');
       var message = document.getElementById('contact-message');
+      [name, email, message].forEach(function (field) {
+        field.classList.toggle('is-invalid', !field.checkValidity());
+      });
+      if (!contactForm.checkValidity()) return;
       var subject = 'Portfolio contact: ' + (name.value.trim() || 'Website visitor');
       var bodyText = 'From: ' + name.value.trim() + '\nEmail: ' + email.value.trim() + '\n\n' + message.value.trim();
       window.location.href = 'mailto:azaghloul206@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(bodyText);
+    });
+    [document.getElementById('contact-name'), document.getElementById('contact-email'), document.getElementById('contact-message')].forEach(function (field) {
+      field.addEventListener('input', function () {
+        field.classList.remove('is-invalid');
+      });
     });
   }
 
