@@ -43,7 +43,7 @@
     body.classList.toggle('settings-panel-open', open);
   }
 
-  setAccent(localStorage.getItem(ACCENT_KEY) || '#ff206e');
+  setAccent(localStorage.getItem(ACCENT_KEY) || '#E8A020');
   applyTheme(localStorage.getItem(THEME_KEY) === 'dark');
 
   if (settingsBtn) settingsBtn.addEventListener('click', function () { openSettings(!settingsPanel.classList.contains('is-open')); });
@@ -54,9 +54,9 @@
   document.querySelectorAll('.accent-swatch').forEach(function (s) { s.addEventListener('click', function () { setAccent(s.getAttribute('data-accent')); }); });
 
   function onScroll() {
-    if (!upBtn) return;
     var y = window.scrollY || document.documentElement.scrollTop;
-    upBtn.classList.toggle('is-visible', y > 320);
+    if (upBtn) upBtn.classList.toggle('is-visible', y > 320);
+    if (nav)   nav.classList.toggle('scrolled', y > 80);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
