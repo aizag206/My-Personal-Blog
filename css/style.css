@@ -410,8 +410,51 @@ header h1 {
   display: block;
 }
 
+/* ─── SALES CAREER ───────────────────────────────────────────── */
+#sales { background: var(--bg); padding: 5rem 0; }
+
+#sales > .lead {
+  color: var(--ink-2); max-width: 620px; margin: 0 auto 1rem;
+  font-size: .92rem;
+}
+.sales-stats { margin: 1.5rem 0 .25rem; }
+.sales-stat__value {
+  display: block;
+  font-family: var(--ff-head);
+  font-size: clamp(1.5rem, 6.5vw, 3.2rem);
+  font-weight: 800; line-height: 1.1;
+  color: var(--accent); letter-spacing: -.02em;
+}
+.sales-stat__label {
+  display: block; margin-top: .35rem;
+  font-size: .75rem; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--ink-2);
+}
+.sales-stats__note { font-size: .78rem; margin-bottom: 3rem; }
+
+.sales-role .card-body { text-align: left; }
+.sales-role__dates {
+  display: block;
+  font-size: .68rem; font-weight: 700;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--accent);
+}
+.sales-role .card-title { margin: .5rem 0 .15rem; font-size: 1.15rem; }
+.sales-role__company {
+  display: block; margin-bottom: 1rem;
+  font-size: .85rem; font-weight: 600; color: var(--ink-2);
+}
+.sales-role__points {
+  margin: 0; padding-left: 1.1rem;
+  font-size: .875rem; color: var(--ink-2); line-height: 1.72;
+}
+.sales-role__points li + li { margin-top: .4rem; }
+.sales-role__points li::marker { color: var(--accent); }
+.sales-earlier { font-size: .85rem; max-width: 640px; margin: 1rem auto 0; }
+
 /* ─── SERVICES ───────────────────────────────────────────────── */
-#services { background: var(--bg); padding: 5rem 0; }
+#services { background: var(--bg-alt); padding: 5rem 0; }
 
 #services > .lead {
   color: var(--ink-2); max-width: 500px; margin: 0 auto 1rem;
@@ -468,7 +511,7 @@ header h1 {
 .btn.main-background-color:hover { opacity: .88; transform: translateY(-1px); }
 
 /* ─── CONTACT ────────────────────────────────────────────────── */
-#contact { background: var(--bg-alt); padding: 5rem 0; }
+#contact { background: var(--bg); padding: 5rem 0; }
 
 #contact > .lead {
   color: var(--ink-2); font-size: .93rem;
@@ -509,7 +552,7 @@ header h1 {
 #contact-form button[type="submit"]:hover { opacity: .88; transform: translateY(-1px); }
 
 /* ─── TESTIMONIALS ───────────────────────────────────────────── */
-#testimonials { background: var(--bg); padding: 5rem 0; }
+#testimonials { background: var(--bg-alt); padding: 5rem 0; }
 
 .testimonials .carousel { padding: 1.5rem 0 4rem; }
 
