@@ -1,60 +1,29 @@
 # My-Personal-Blog
 
-Ahmad Zaghloul's personal portfolio website.
+Ahmad Zaghloul's portfolio: software engineer and automotive sales consultant, Cairo.
 
-This is a responsive one-page portfolio built to present front-end development skills, AI-assisted software workflow experience, and real business-facing problem solving shaped by an automotive consulting background.
+Live at https://aizag206.github.io/My-Personal-Blog/
 
-## Project Purpose
+## Design
 
-The site is designed to showcase:
-
-- Front-end interface development skills
-- AI-assisted software workflow experience
-- Client-focused digital problem solving
-- Automotive consulting experience translated into product thinking
-
-## Built With
-
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap
-- Font Awesome
-
-## Features
-
-- Responsive layout for desktop and mobile
-- Hero section with clear personal positioning
-- Profile, about, and services sections
-- Testimonials carousel
-- Contact form that prepares an email message
-- Theme settings panel with accent color and dark mode
-- Scroll reveal and navigation enhancements
+An instrument cluster. The hero is a dashboard: gauges that run a self-test sweep on load, a Cairo clock, and a **drive-mode switch** (Engineer / Showroom) that swaps the accent colour, the tagline and the gauge readings. The nav is a gear selector (P · R · N · D) that lights up as you scroll.
 
 ## Sections
 
-- Home
-- Profile
-- About
-- Services
-- Contact
-- Testimonials
+- **Ignition**: name, role, live status (on shift / after hours), two gauges
+- **D, The lineup**: Lawyer Assistant, Stance Store, eilaaflawfirm.com, Leadbot, each with a spec table
+- **R, Track record**: sales stats and a timeline (Geely, Egytrade, Planet X, earlier)
+- **P, Driver profile**: INFP-T trait bars and how they show up at work
+- **N, Now**: what's happening this month. Update it and its date stamp when things change
+- **Service log**: certificates, training, degree
+- **Contact**
 
-## About Me
+## Built with
 
-I am a front-end developer focused on building practical digital solutions with modern AI-assisted development workflows. My previous experience in customer communication and automotive consulting helps me turn business requirements into structured, usable interfaces.
+Plain HTML, CSS and JavaScript, with no framework and no build step. Gauges are inline SVG drawn in `js/main.js`. The fonts are Chakra Petch and Figtree. Motion is switched off for visitors who ask for reduced motion.
 
-## Future Improvements
+## Updating
 
-- Add a dedicated project showcase section
-- Publish deeper client case studies
-- Connect the contact flow to a backend service
-- Continue improving performance and animation polish
-- Add blog content around software, AI workflows, and automotive insights
-
-## Author
-
-Ahmad Zaghloul  
-Cairo, Egypt
-
-[LinkedIn](https://www.linkedin.com/in/ahmed-zaghloul-63382217a/)
+- Gauge values per mode live in the `data-engineer` / `data-showroom` attributes on each `.gauge` in `index.html`.
+- Images live in `img/`.
+- Deploys from `main` via GitHub Pages.

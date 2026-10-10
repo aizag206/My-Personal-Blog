@@ -1,461 +1,299 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-mode="engineer">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Ahmad Zaghloul — Front-End Developer using AI to build applications, systems, and digital products.">
-    <title>Ahmad Zaghloul | Front-end Developer</title>
+    <title>Ahmad Zaghloul · Software Engineer &amp; Automotive Sales</title>
+    <meta name="description" content="Ahmad Zaghloul: software engineer and Geely sales consultant in Cairo. I build the systems people run their work on, and I sell cars.">
+    <meta name="theme-color" content="#0B0D10">
+    <meta property="og:title" content="Ahmad Zaghloul · Software Engineer &amp; Automotive Sales">
+    <meta property="og:description" content="I build the systems people run their work on, and I sell cars. Cairo.">
+    <meta property="og:image" content="https://aizag206.github.io/My-Personal-Blog/img/portrait.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-spy="scroll" data-target="#navbarNavAltMarkup" data-offset="80">
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <div id="settings-backdrop" class="settings-backdrop" aria-hidden="true"></div>
-    <aside id="settings-panel" class="settings-panel" aria-hidden="true">
-        <div class="settings-panel-inner">
-            <h2>Site settings</h2>
-            <label for="theme-toggle-btn">Theme</label>
-            <button type="button" id="theme-toggle-btn" class="btn btn-outline-secondary btn-block">Switch to dark mode</button>
-            <label>Accent color</label>
-            <div class="accent-swatches">
-                <button type="button" class="accent-swatch active" data-accent="#E8A020" style="background-color:#E8A020" aria-label="Amber"></button>
-                <button type="button" class="accent-swatch" data-accent="#2563EB" style="background-color:#2563EB" aria-label="Blue"></button>
-                <button type="button" class="accent-swatch" data-accent="#059669" style="background-color:#059669" aria-label="Emerald"></button>
-                <button type="button" class="accent-swatch" data-accent="#E11D48" style="background-color:#E11D48" aria-label="Crimson"></button>
-            </div>
-            <button type="button" id="settings-close" class="btn btn-secondary btn-block">Close</button>
-        </div>
-    </aside>
+    <!-- Top bar: brand, gear selector, Cairo clock -->
+    <header class="topbar">
+        <a class="topbar__brand" href="#ignition" aria-label="Back to top">AZ</a>
+        <nav class="gears" aria-label="Sections">
+            <a class="gear" href="#profile" data-gear="profile"><span class="gear__letter">P</span><span class="gear__label">Profile</span></a>
+            <a class="gear" href="#record" data-gear="record"><span class="gear__letter">R</span><span class="gear__label">Record</span></a>
+            <a class="gear" href="#now" data-gear="now"><span class="gear__letter">N</span><span class="gear__label">Now</span></a>
+            <a class="gear" href="#drive" data-gear="drive"><span class="gear__letter">D</span><span class="gear__label">Drive</span></a>
+        </nav>
+        <div class="topbar__clock" aria-label="Local time in Cairo"><span id="clock">--:--</span> <span class="topbar__city">CAI</span></div>
+    </header>
 
-    <nav id="site-nav" class="navbar navbar-expand-lg navbar-light bg-white shadow-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand color-main font-weight-bold" href="#home">A Z</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav font-big ml-auto">
-                    <a class="nav-link ml-3 mr-2" href="#home">Home</a>
-                    <a class="nav-link mr-2" href="#profile">Profile</a>
-                    <a class="nav-link mr-2" href="#about">About</a>
-                    <a class="nav-link mr-2" href="#sales">Sales</a>
-                    <a class="nav-link mr-2" href="#services">Services</a>
-                    <a class="nav-link mr-2" href="#contact">Contact</a>
-                    <a class="nav-link mr-2" href="#testimonials">Testimonials</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <main id="main">
 
-    <main id="main-content">
-        <header id="home" class="hero-home d-flex align-items-center justify-content-center">
-            <div class="header-items text-white pl-3 pr-3 text-center">
-                <h4 class="hero-el hero-el--1">Welcome</h4>
-                <h1 class="hero-el hero-el--2">I'M </h1>
-                <p class="hero-el hero-el--3 text-muted">Front‑End Developer &nbsp;·&nbsp; Builds with AI &nbsp;·&nbsp; Cairo</p>
-                <div class="icon-panel hero-el hero-el--4 d-flex justify-content-center flex-wrap">
-                    <a href="https://www.facebook.com/ahmed.h.zaghloul" target="_blank" rel="noopener noreferrer" class="btn icon mr-3 mb-2 d-flex justify-content-center align-items-center rounded-circle text-primary bg-light" aria-label="Facebook profile">
-                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://x.com/Psychopath206" target="_blank" rel="noopener noreferrer" class="btn icon mr-3 mb-2 d-flex justify-content-center align-items-center rounded-circle text-dark bg-light" aria-label="X profile">
-                        <i class="fab fa-x-twitter" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://www.instagram.com/ahmedzaghloul82/" target="_blank" rel="noopener noreferrer" class="btn icon mr-3 mb-2 d-flex justify-content-center align-items-center rounded-circle text-danger bg-light" aria-label="Instagram profile">
-                        <i class="fab fa-instagram" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/azaghloul206/" target="_blank" rel="noopener noreferrer" class="btn icon mr-3 mb-2 d-flex justify-content-center align-items-center rounded-circle text-primary bg-light" aria-label="LinkedIn profile">
-                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                    </a>
-                </div>
-                <p class="hero-el hero-el--5 mt-3 mb-0">
-                    <a class="btn btn-light color-main font-weight-bold hero-cta-btn mr-sm-3 mb-3 mb-sm-0" href="https://drive.google.com/file/d/1dYoHQ-awI_teDz8wg38GTo1Q-53W18nK/view?usp=sharing" target="_blank" rel="noopener noreferrer">View my CV</a>
-                    <a class="btn btn-outline-light font-weight-bold hero-cta-btn" href="#contact">Start a conversation</a>
-                </p>
-            </div>
-            <a href="#profile" id="hero-scroll-hint" class="hero-scroll-hint" aria-label="Scroll to profile section">
-                <span class="hero-scroll-hint__mouse" aria-hidden="true">
-                    <span class="hero-scroll-hint__wheel"></span>
-                </span>
-                <span class="hero-scroll-hint__label">Scroll</span>
-            </a>
-            <div class="fixed-icons">
-                <button type="button" id="settings-toggle" class="settings-toggle position-fixed" aria-expanded="false" aria-controls="settings-panel" title="Open site settings">
-                    <i class="fa-solid fa-gear text-white" aria-hidden="true"></i>
-                </button>
-                <a href="#home" id="scroll-up-btn" class="up-icon position-fixed" aria-label="Back to top">
-                    <i class="fa-solid fa-chevron-up text-white" aria-hidden="true"></i>
-                </a>
-            </div>
-        </header>
-
-        <section id="profile" class="py-2 reveal-on-scroll">
-            <div class="container py-5 text-center">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="profile-photo-wrap">
-                            <img src="Photos/83992641.png" alt="Portrait of Ahmad Zaghloul">
-                        </div>
-                        <h3>Name</h3>
-                        <p class="lead">Ahmad Zaghloul</p>
-                        <h3>Role</h3>
-                        <p class="lead">Team Leader, Sales Consultant & Quality Control - Egytrade Automotive</p>
-                        <h3>Phone</h3>
-                        <p class="lead"><a href="tel:+201092472433" aria-label="Call Ahmad Zaghloul">+20 109 247 2433</a></p>       
-                        <h3>Email</h3>
-                        <p class="lead"><a href="mailto:azaghloul206@gmail.com" aria-label="Send email to Ahmad Zaghloul">azaghloul206@gmail.com</a></p>
-                        <h3>Location</h3>
-                        <p class="lead">Cairo, Egypt</p>
+        <!-- IGNITION -->
+        <section id="ignition" class="ignition">
+            <div class="ignition__inner">
+                <div class="ignition__copy">
+                    <div class="mode" role="group" aria-label="Drive mode">
+                        <button type="button" class="mode__btn" data-set-mode="engineer" aria-pressed="true">Engineer</button>
+                        <button type="button" class="mode__btn" data-set-mode="showroom" aria-pressed="false">Showroom</button>
                     </div>
-                    <div class="col-md-9 text-center">
-                        <h2 class="color-main">Front‑End Developer Building Applications & Systems with AI</h2>
-                        <p class="lead mb-5">Front‑end developer who uses AI tools to build complete applications and systems — faster and with greater depth. I combine hands‑on technical implementation with real client‑facing experience from the automotive industry to turn business requirements into practical, working products.</p>
-                        <div class="row text-center">
-                            <div class="col-md-12 mb-5">
-                                <i class="fa-solid fa-laptop-code fa-2x mb-2" aria-hidden="true"></i>
-                                <h3>Core Skills</h3>
-                                <div class="line-break mb-3"></div>
-                                <p class="lead">HTML • CSS • JavaScript • Bootstrap • Responsive UI Architecture • Git • Building with AI tools • Application & system development • Client requirement analysis • Consultative sales strategy • Workflow coordination</p>
-                            </div>
+                    <h1 class="ignition__name">Ahmad<br>Zaghloul</h1>
+                    <p class="ignition__role">Software engineer <span class="dot">·</span> Automotive sales</p>
+                    <p class="ignition__tagline" data-engineer="I build the systems people run their work on, then I use them myself. A shop's books, a law firm's cases, a sales team's outreach." data-showroom="I sell cars the way I build software: listen first, find what the client actually needs, then close on it.">I build the systems people run their work on, then I use them myself. A shop's books, a law firm's cases, a sales team's outreach.</p>
 
-                            <div class="col-md-6 mb-4">
-                                <i class="fa-solid fa-graduation-cap fa-2x mb-2" aria-hidden="true"></i>
-                                <h3>Education</h3>
-                                <div class="line-break mb-3"></div>
-                                <p class="lead">Bachelor’s Degree in Management Information Systems</p>
-                                <p class="text-muted">El‑Shorouk Academy</p>
-                            </div>
+                    <ul class="status">
+                        <li><span class="led led--on" aria-hidden="true"></span><span class="status__k">On shift</span><span class="status__v">Sales Consultant · Geely Egypt</span></li>
+                        <li><span class="led led--on led--alt" aria-hidden="true"></span><span class="status__k">After hours</span><span class="status__v">Lawyer Assistant · Stance Store · Eilaaf</span></li>
+                    </ul>
 
-                            <div class="col-md-6 mb-4">
-                                <i class="fa-solid fa-code fa-2x mb-2" aria-hidden="true"></i>
-                                <h3>Technical Training</h3>
-                                <div class="line-break mb-3"></div>
-                                <p class="lead">Full‑Stack Web Development Program</p>
-                                <p class="text-muted">Route IT Training Center</p>
-                                <p class="text-muted">Built responsive UI projects using HTML, CSS, JavaScript, and Bootstrap</p>
-                            </div>
+                    <div class="cta">
+                        <a class="btn btn--primary" href="https://drive.google.com/file/d/1dYoHQ-awI_teDz8wg38GTo1Q-53W18nK/view?usp=sharing" target="_blank" rel="noopener noreferrer">View my CV</a>
+                        <a class="btn btn--ghost" href="#contact">Get in touch</a>
+                    </div>
+                </div>
 
-                            <div class="col-md-6 mb-4">
-                                <i class="fa-solid fa-robot fa-2x mb-2" aria-hidden="true"></i>
-                                <h3>AI Training</h3>
-                                <div class="line-break mb-3"></div>
-                                <p class="lead">AI Workflow & Software Prototyping & Development Program</p>
-                                <p class="text-muted">Catalyst AI</p>
-                                <p class="text-muted">Hands‑on training in structured prompting, full software implementation workflows, and building production‑ready solutions using modern generative AI tools</p>
-                            </div>
-
-                            <div class="col-md-6 mb-4">
-                                <i class="fa-solid fa-briefcase fa-2x mb-2" aria-hidden="true"></i>
-                                <h3>Professional Background</h3>
-                                <div class="line-break mb-3"></div>
-                                <p class="lead">Automotive consulting, customer solutions, and team leadership</p>
-                                <p class="text-muted">Egytrade Automotive</p>
-                                <p class="text-muted">Experience leading client consultations, analyzing requirements, and translating complex purchasing workflows into structured solution decisions now applied to digital product development</p>
-                            </div>
+                <div class="cluster">
+                    <figure class="cluster__photo">
+                        <img src="img/portrait.jpg" alt="Ahmad Zaghloul in a dark blazer, smiling" width="1100" height="1268">
+                    </figure>
+                    <div class="gauges">
+                        <div class="gauge" id="gauge-a"
+                             data-engineer='{"value":100,"max":100,"display":"100","label":"Lighthouse score","sub":"eilaaflawfirm.com"}'
+                             data-showroom='{"value":48,"max":60,"display":"48+","label":"Contracts closed","sub":"Dec 2024 – Mar 2026"}'></div>
+                        <div class="gauge" id="gauge-b"
+                             data-engineer='{"value":4,"max":5,"display":"4","label":"Products shipped","sub":"in real daily use"}'
+                             data-showroom='{"value":364,"max":400,"display":"364+","label":"Client meetings","sub":"high-ticket, multi-meeting"}'></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="py-4 text-center reveal-on-scroll">
-            <div class="section-header">
-                <span class="section-eyebrow">01</span>
-                <h2 class="section-heading">About</h2>
-                <div class="section-rule"></div>
+        <!-- D: THE LINEUP -->
+        <section id="drive" class="section" data-gear-section="drive">
+            <div class="section__head">
+                <span class="section__gear">D</span>
+                <div>
+                    <h2 class="section__title">The lineup</h2>
+                    <p class="section__lede">Four products. Every one of them is used by real people. Two of them, I use every day myself.</p>
+                </div>
             </div>
-            <div class="container-fluid mt-5">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="Photos/IMG_6724.jpg" class="w-100" alt="Workspace and creative setup">
+
+            <div class="lineup">
+                <article class="screen">
+                    <div class="screen__bar"><span class="screen__no">01</span><span class="screen__name">Lawyer Assistant</span><span class="screen__status"><span class="led led--on" aria-hidden="true"></span>In use</span></div>
+                    <div class="screen__media screen__media--navy"><img src="img/lineup-lawyer-assistant.jpg" alt="Lawyer Assistant logo: scales of justice with the Arabic name مساعد المحامي" loading="lazy" width="1200" height="630"></div>
+                    <div class="screen__body">
+                        <p class="screen__pitch">Case management for Egyptian lawyers, in Arabic and English. It's the internal system at Eilaaf Law Firm, where the lawyers run their cases on it.</p>
+                        <dl class="specs">
+                            <div><dt>Engine</dt><dd>React · Node / Express · PostgreSQL</dd></div>
+                            <div><dt>Languages</dt><dd>Arabic (RTL) · English</dd></div>
+                            <div><dt>Payments</dt><dd>Kashier, live subscriptions</dd></div>
+                            <div><dt>Security</dt><dd>httpOnly JWT, rate limits, audit log</dd></div>
+                        </dl>
+                        <a class="screen__link" href="https://lawyerassistant.app" target="_blank" rel="noopener noreferrer">lawyerassistant.app <span aria-hidden="true">↗</span></a>
                     </div>
-                    <div class="col-md-8 text-left d-flex align-items-center">
-                        <div class="about-content">
-                            <h5>Ahmad Zaghloul</h5>
-                            <p class="lead color-main">Front‑End Developer who uses AI to build applications and systems, with automotive consulting background</p>
-                            <p class="lead text-muted">I use AI tools to build complete applications and systems — from internal management platforms to customer-facing web interfaces. My background in automotive consulting sharpened my ability to understand real business requirements and translate them into practical, working software.</p>
-                            <p class="lead text-muted">Currently building hands‑on projects that turn business needs into production‑ready digital products, using AI as a development tool to work faster and go deeper than traditional front‑end alone.</p>
-                        </div>
+                </article>
+
+                <article class="screen">
+                    <div class="screen__bar"><span class="screen__no">02</span><span class="screen__name">Stance Store</span><span class="screen__status"><span class="led led--on" aria-hidden="true"></span>Live books</span></div>
+                    <div class="screen__media screen__media--black"><img src="img/lineup-stance-store.jpg" alt="Stance Store Tuners logo" loading="lazy" width="480" height="480"></div>
+                    <div class="screen__body">
+                        <p class="screen__pitch">The business system for an automotive accessories shop: sales, stock, returns, payroll and PDF reports. It has run the shop's real books since August 2026, and I'm the one entering the transactions.</p>
+                        <dl class="specs">
+                            <div><dt>Engine</dt><dd>React 19 · Vite · Supabase (Postgres)</dd></div>
+                            <div><dt>Money logic</dt><dd>In the database: transactional RPCs, triggers</dd></div>
+                            <div><dt>Access</dt><dd>Owner / Manager / Staff via row-level security</dd></div>
+                            <div><dt>Schema</dt><dd>63 versioned migrations</dd></div>
+                        </dl>
+                        <span class="screen__note">Private system: it runs a real business.</span>
+                    </div>
+                </article>
+
+                <article class="screen">
+                    <div class="screen__bar"><span class="screen__no">03</span><span class="screen__name">eilaaflawfirm.com</span><span class="screen__status"><span class="led led--on" aria-hidden="true"></span>Live</span></div>
+                    <div class="screen__media"><img src="img/lineup-eilaaf.jpg" alt="Eilaaf Law Firm homepage: 'Counsel that stays with the file.' over a Cairo skyline" loading="lazy" width="1200" height="750"></div>
+                    <div class="screen__body">
+                        <p class="screen__pitch">Brand, design system and the bilingual website for Eilaaf, a Cairo law firm where I'm the technical partner. The pages come from a static generator I wrote, and online booking lands straight in the firm's sheet.</p>
+                        <dl class="specs">
+                            <div><dt>Engine</dt><dd>Custom static generator, zero dependencies</dd></div>
+                            <div><dt>Lighthouse</dt><dd>99–100 across all four</dd></div>
+                            <div><dt>Languages</dt><dd>Arabic · English, 15 pages</dd></div>
+                            <div><dt>Hosting</dt><dd>Cloudflare Pages + Email Routing</dd></div>
+                        </dl>
+                        <a class="screen__link" href="https://eilaaflawfirm.com" target="_blank" rel="noopener noreferrer">eilaaflawfirm.com <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+
+                <article class="screen">
+                    <div class="screen__bar"><span class="screen__no">04</span><span class="screen__name">Leadbot</span><span class="screen__status"><span class="led" aria-hidden="true"></span>Complete</span></div>
+                    <div class="screen__media screen__media--leadbot" aria-hidden="true">
+                        <span class="leadbot-mark"><svg viewBox="0 0 16 16" width="34" height="34"><path d="M9.5 2L4 9h4.5L6.5 14 13 7H8.5L9.5 2z" fill="#fff"/></svg></span>
+                        <span class="leadbot-word">Lead<b>Bot</b></span>
+                    </div>
+                    <div class="screen__body">
+                        <p class="screen__pitch">Outreach on autopilot. A new lead lands in a Google Sheet, an AI-written email goes out from your real Gmail, and follow-ups stop the moment they reply.</p>
+                        <dl class="specs">
+                            <div><dt>Engine</dt><dd>Next.js · background worker</dd></div>
+                            <div><dt>Integrations</dt><dd>Gmail OAuth · Google Sheets</dd></div>
+                            <div><dt>Billing</dt><dd>LemonSqueezy, three plans</dd></div>
+                            <div><dt>Smarts</dt><dd>Reply detection, STOP handling, drip delays</dd></div>
+                        </dl>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- R: TRACK RECORD -->
+        <section id="record" class="section" data-gear-section="record">
+            <div class="section__head">
+                <span class="section__gear">R</span>
+                <div>
+                    <h2 class="section__title">Track record</h2>
+                    <p class="section__lede">High-ticket, multi-meeting, referral-driven sales. It's the client side of every product I build.</p>
+                </div>
+            </div>
+
+            <div class="readouts">
+                <div class="readout"><span class="readout__v">48+</span><span class="readout__k">Contracts closed</span></div>
+                <div class="readout"><span class="readout__v">364+</span><span class="readout__k">Client meetings</span></div>
+                <div class="readout"><span class="readout__v">45</span><span class="readout__k">Deals in 2025 alone</span></div>
+                <div class="readout"><span class="readout__v">#2</span><span class="readout__k">Of four closers</span></div>
+            </div>
+            <p class="readouts__note">Documented record, Dec 2024 – Mar 2026. The true totals are higher.</p>
+
+            <ol class="timeline">
+                <li class="timeline__item timeline__item--now">
+                    <div class="timeline__when">Oct 2026 – now</div>
+                    <div class="timeline__what">
+                        <div class="timeline__title"><img class="timeline__logo" src="img/geely.svg" alt="Geely" width="70" height="36"><span>Sales Consultant</span></div>
+                        <p>Back on the showroom floor, this time with Geely's lineup.</p>
+                    </div>
+                </li>
+                <li class="timeline__item">
+                    <div class="timeline__when">Jul 2023 – Apr 2026</div>
+                    <div class="timeline__what">
+                        <div class="timeline__title"><span>Sales Team Leader</span><span class="timeline__org">Egytrade Automotive</span></div>
+                        <ul>
+                            <li>Sold premium vehicles imported from Germany, running each deal from the first meeting through follow-up to the signed contract.</li>
+                            <li>Built the company's 2025 sales-performance report and its analysis, and was a candidate for sales supervisor.</li>
+                            <li>Held sales consulting and quality control alongside leading the team.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="timeline__item">
+                    <div class="timeline__when">Nov 2022 – Mar 2023</div>
+                    <div class="timeline__what">
+                        <div class="timeline__title"><span>Game Master</span><span class="timeline__org">Planet X Egypt</span></div>
+                        <p>Ran live VR escape-room sessions for walk-in groups, reading each group's mood and skill level in real time.</p>
+                    </div>
+                </li>
+                <li class="timeline__item">
+                    <div class="timeline__when">Earlier</div>
+                    <div class="timeline__what">
+                        <p>Customer support at Vodafone Egypt, then device and plan sales in telecom stores.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- P: DRIVER PROFILE -->
+        <section id="profile" class="section" data-gear-section="profile">
+            <div class="section__head">
+                <span class="section__gear">P</span>
+                <div>
+                    <h2 class="section__title">Driver profile</h2>
+                    <p class="section__lede">The person behind both jobs.</p>
+                </div>
+            </div>
+
+            <div class="driver">
+                <figure class="driver__photo">
+                    <img src="img/profile-bw.jpg" alt="Black-and-white portrait of Ahmad Zaghloul" loading="lazy" width="400" height="400">
+                    <figcaption>INFP-T · The Mediator</figcaption>
+                </figure>
+
+                <div class="driver__body">
+                    <div class="traits" aria-label="16Personalities trait scores">
+                        <div class="trait"><span class="trait__k">Introverted</span><span class="trait__bar"><i style="--v:58"></i></span><span class="trait__v">58%</span></div>
+                        <div class="trait"><span class="trait__k">Intuitive</span><span class="trait__bar"><i style="--v:67"></i></span><span class="trait__v">67%</span></div>
+                        <div class="trait"><span class="trait__k">Feeling</span><span class="trait__bar"><i style="--v:52"></i></span><span class="trait__v">52%</span></div>
+                        <div class="trait"><span class="trait__k">Prospecting</span><span class="trait__bar"><i style="--v:51"></i></span><span class="trait__v">51%</span></div>
+                        <div class="trait"><span class="trait__k">Turbulent</span><span class="trait__bar"><i style="--v:51"></i></span><span class="trait__v">51%</span></div>
+                    </div>
+
+                    <div class="notes">
+                        <p><strong>I read the room first.</strong> Before a car sale, before a feature. Most of a deal happens while the client is talking, and most of a product happens while the user is.</p>
+                        <p><strong>I learned it running games.</strong> As a Game Master I watched groups get stuck, frustrated or bored, and adjusted the session to the people in it, not the other way round.</p>
+                        <p><strong>I build for people I know, then I use it.</strong> Stance Store runs the shop I work in. Eilaaf's site and case system run my friends' firm. If it breaks, I hear about it the same day.</p>
+                        <p><strong>I run several lanes at once,</strong> on purpose. Cars by day, code by night. Each one makes me better at the other.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="sales" class="py-5 reveal-on-scroll">
-            <div class="section-header text-center">
-                <span class="section-eyebrow">02</span>
-                <h2 class="section-heading">Sales Career</h2>
-                <div class="section-rule"></div>
-            </div>
-            <p class="lead text-center my-4">High‑ticket, multi‑meeting, referral‑driven sales — the client side of every product I build</p>
-            <div class="container">
-                <div class="row text-center sales-stats">
-                    <div class="col-4">
-                        <span class="sales-stat__value">48+</span>
-                        <span class="sales-stat__label">Closed contracts</span>
-                    </div>
-                    <div class="col-4">
-                        <span class="sales-stat__value">364+</span>
-                        <span class="sales-stat__label">Client meetings</span>
-                    </div>
-                    <div class="col-4">
-                        <span class="sales-stat__value">#2</span>
-                        <span class="sales-stat__label">Of four closers in 2025</span>
-                    </div>
+        <!-- N: NOW -->
+        <section id="now" class="section" data-gear-section="now">
+            <div class="section__head">
+                <span class="section__gear">N</span>
+                <div>
+                    <h2 class="section__title">Now</h2>
+                    <p class="section__lede">What I'm doing this month. <span class="stamp">Updated 11 Oct 2026</span></p>
                 </div>
-                <p class="text-center text-muted sales-stats__note">Documented record, Dec 2024 – Mar 2026</p>
-
-                <div class="row">
-                    <div class="col-md-8 mb-4">
-                        <div class="card service-card sales-role h-100 shadow-sm border-0">
-                            <div class="card-body">
-                                <span class="sales-role__dates">Jul 2023 – Apr 2026</span>
-                                <h4 class="card-title">Sales Team Leader</h4>
-                                <span class="sales-role__company">Egytrade Automotive</span>
-                                <ul class="sales-role__points">
-                                    <li>Sold premium vehicles imported from Germany, running each deal from the first meeting through follow‑up to the signed contract.</li>
-                                    <li>45 closed deals and ~319 client meetings in 2025 alone, ranked second of the company's four closers.</li>
-                                    <li>Built the company's 2025 sales‑performance report and its analysis, and was a candidate for promotion to sales supervisor.</li>
-                                    <li>Held sales consulting and quality control responsibilities alongside leading the team.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card service-card sales-role h-100 shadow-sm border-0">
-                            <div class="card-body">
-                                <span class="sales-role__dates">Nov 2022 – Mar 2023</span>
-                                <h4 class="card-title">Game Master</h4>
-                                <span class="sales-role__company">Planet X Egypt</span>
-                                <ul class="sales-role__points">
-                                    <li>Ran live VR escape‑room sessions for walk‑in groups, reading each group's mood and skill level in real time.</li>
-                                    <li>Handled peak‑floor pressure and face‑to‑face service recovery.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-center text-muted sales-earlier">Earlier: customer support at Vodafone Egypt and device and plan sales in telecom stores. Sales training: <em>Unlock Your Client Code</em>, ASAT (Dec 2025).</p>
             </div>
+            <ul class="now">
+                <li><span class="now__k">Showroom</span>Started at Geely Egypt on 4 October, learning the lineup car by car.</li>
+                <li><span class="now__k">Eilaaf</span>The firm's launch film is out on TikTok, Instagram and Facebook. The social posts and the site are mine.</li>
+                <li><span class="now__k">Stance Store</span>Keeping the shop's books honest, one transaction at a time.</li>
+                <li><span class="now__k">This site</span>Rebuilt from scratch as an instrument cluster, because that's what my head looks like.</li>
+            </ul>
         </section>
 
-        <section id="services" class="py-5 reveal-on-scroll">
-            <div class="section-header text-center">
-                <span class="section-eyebrow">03</span>
-                <h2 class="section-heading">Services</h2>
-                <div class="section-rule"></div>
-            </div>
-            <p class="lead text-center my-4">What I can help you with</p>
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-md-3 mb-4">
-                        <div class="card service-card h-100 shadow-sm border-0">
-                            <div class="card-body">
-                                <i class="fa-solid fa-laptop-code fa-2x color-main mb-3"></i>
-                                <h4 class="card-title">Business Web Interfaces</h4>
-                                <p class="card-text text-muted">Responsive landing pages and structured web interfaces designed to support real business workflows, customer journeys, and decision processes.</p>
-                                <a href="#contact" class="btn main-background-color text-white">Start a project</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 mb-4">
-                        <div class="card service-card h-100 shadow-sm border-0">
-                            <div class="card-body">
-                                <i class="fa-solid fa-robot fa-2x color-main mb-3"></i>
-                                <h4 class="card-title">Applications & Systems Built with AI</h4>
-                                <p class="card-text text-muted">Development of internal tools, management systems, and workflow applications — built using AI to deliver more complete and capable products.</p>
-                                <a href="#contact" class="btn main-background-color text-white">Discuss your idea</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 mb-4">
-                        <div class="card service-card h-100 shadow-sm border-0">
-                            <div class="card-body">
-                                <i class="fa-solid fa-diagram-project fa-2x color-main mb-3"></i>
-                                <h4 class="card-title">Workflow & UX Improvement</h4>
-                                <p class="card-text text-muted">Improve structure, usability, and performance of existing websites by redesigning interface logic and simplifying user journeys.</p>
-                                <a href="#contact" class="btn main-background-color text-white">Improve your site</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 mb-4">
-                        <div class="card service-card h-100 shadow-sm border-0">
-                            <div class="card-body">
-                                <i class="fa-solid fa-lightbulb fa-2x color-main mb-3"></i>
-                                <h4 class="card-title">Digital Solution Planning</h4>
-                                <p class="card-text text-muted">Translate business requirements into structured software interface plans and working prototypes before development begins.</p>
-                                <a href="#contact" class="btn main-background-color text-white">Plan your solution</a>
-                            </div>
-                        </div>
-                    </div>
+        <!-- SERVICE LOG -->
+        <section id="log" class="section">
+            <div class="section__head">
+                <span class="section__gear section__gear--muted">§</span>
+                <div>
+                    <h2 class="section__title">Service log</h2>
+                    <p class="section__lede">Training, certificates, degree.</p>
                 </div>
             </div>
+            <ul class="log">
+                <li class="stampcard"><span class="stampcard__date">May 2026</span><span class="stampcard__name">Claude Code 101</span><span class="stampcard__by">Anthropic</span></li>
+                <li class="stampcard"><span class="stampcard__date">Apr 2026</span><span class="stampcard__name">Claude Code in Action</span><span class="stampcard__by">Anthropic</span></li>
+                <li class="stampcard"><span class="stampcard__date">Mar 2026</span><span class="stampcard__name">Claude 101</span><span class="stampcard__by">Anthropic</span></li>
+                <li class="stampcard"><span class="stampcard__date">Dec 2025</span><span class="stampcard__name">Unlock Your Client Code</span><span class="stampcard__by">ASAT · sales training</span></li>
+                <li class="stampcard"><span class="stampcard__date">AI program</span><span class="stampcard__name">AI Workflow &amp; Software Prototyping</span><span class="stampcard__by">Catalyst AI</span></li>
+                <li class="stampcard"><span class="stampcard__date">2022</span><span class="stampcard__name">B.Sc. Management Information Systems</span><span class="stampcard__by">El Shorouk Academy</span></li>
+                <li class="stampcard"><span class="stampcard__date">2021</span><span class="stampcard__name">Full-Stack Web Development</span><span class="stampcard__by">Route IT Training Center</span></li>
+            </ul>
         </section>
 
-        <section id="contact" class="py-5 reveal-on-scroll">
-            <div class="section-header text-center">
-                <span class="section-eyebrow">04</span>
-                <h2 class="section-heading">Contact</h2>
-                <div class="section-rule"></div>
-            </div>
-            <p class="lead text-center my-4">Send a message and your email app will open with the details ready to review.</p>
-            <div class="container" style="max-width: 560px;">
-                <form id="contact-form" class="text-left">
-                    <div class="form-group">
-                        <label for="contact-name">Name</label>
-                        <input type="text" class="form-control" id="contact-name" name="name" autocomplete="name" required>
-                        <div class="invalid-feedback">Please enter your name.</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="contact-email">Email</label>
-                        <input type="email" class="form-control" id="contact-email" name="email" autocomplete="email" required>
-                        <div class="invalid-feedback">Please enter a valid email address.</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="contact-message">Message</label>
-                        <textarea class="form-control" id="contact-message" name="message" rows="5" required></textarea>
-                        <div class="invalid-feedback">Please add a short message.</div>
-                    </div>
-                    <button type="submit" class="btn main-background-color text-white btn-block">Send via email</button>
-                </form>
-            </div>
-        </section>
-
-        <section id="testimonials" class="testimonials py-5 reveal-on-scroll">
-            <div class="section-header text-center">
-                <span class="section-eyebrow">05</span>
-                <h2 class="section-heading">Testimonials</h2>
-                <div class="section-rule"></div>
-            </div>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
-                </ol>
-                    <div class="carousel-inner">
-                    <div class="carousel-item text-center active">
-                        <div class="testimonial-logo-wrapper shadow">
-                            <img src="Photos/Route logo.jpg" alt="Route IT Training Center" class="w-100 h-100">
-                        </div>
-                        <div class="client-feedback w-75 m-auto p-3">
-                            <h4 class="mt-5">Technical Training Performance</h4>
-                            <span class="text-muted">Route IT Training Center</span>
-                            <p class="lead py-2">Demonstrated strong commitment during the full‑stack development program and successfully delivered responsive UI assignments using HTML, CSS, and JavaScript.</p>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item text-center">
-                        <div class="testimonial-logo-wrapper shadow">
-                            <img src="Photos/Vodafone logo.jpg" alt="Vodafone Egypt" class="w-100 h-100">
-                        </div>
-                        <div class="client-feedback w-75 m-auto p-3">
-                            <h4 class="mt-5">Customer Communication</h4>
-                            <span class="text-muted">Vodafone Egypt</span>
-                            <p class="lead py-2">Recognized for clear problem‑solving communication and the ability to guide customers through technical issues efficiently in fast‑paced support environments.</p>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item text-center">
-                        <div class="testimonial-logo-wrapper shadow">
-                            <i class="fa-solid fa-store fa-2x text-secondary"></i>
-                        </div>
-                        <div class="client-feedback w-75 m-auto p-3">
-                            <h4 class="mt-5">Consultative Product Guidance</h4>
-                            <span class="text-muted">Telecom Stores</span>
-                            <p class="lead py-2">Helped customers evaluate technical options and select suitable devices and plans, strengthening user‑needs analysis now applied to digital product experiences.</p>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item text-center">
-                        <div class="testimonial-logo-wrapper shadow">
-                            <img src="Photos/Egytrade logo.jpg" alt="Egytrade Automotive" class="w-100 h-100">
-                        </div>
-                        <div class="client-feedback w-75 m-auto p-3">
-                            <h4 class="mt-5">Sales Leadership & Automotive Consulting</h4>
-                            <span class="text-muted">Egytrade Automotive</span>
-                            <p class="lead py-2">Led client consultations and coordinated sales processes for imported vehicles from Germany, helping customers evaluate specifications, pricing structures, and delivery timelines while improving decision confidence and closing efficiency.</p>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item text-center">
-                        <div class="testimonial-logo-wrapper shadow">
-                            <img src="Photos/Catalyst logo .jpg" alt="Catalyst AI" class="w-100 h-100">
-                        </div>
-                        <div class="client-feedback w-75 m-auto p-3">
-                            <h4 class="mt-5">Technical training performance</h4>
-                            <span class="text-muted">Catalyst AI</span>
-                            <p class="lead py-2">Completed hands‑on AI workflow training focused on building practical software solutions faster using modern generative tools, structured prompting techniques, and rapid interface prototyping and development for real‑world project scenarios.</p>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item text-center">
-                        <div class="testimonial-logo-wrapper shadow">
-                            <i class="fa-solid fa-laptop-code fa-2x text-secondary"></i>
-                        </div>
-                        <div class="client-feedback w-75 m-auto p-3">
-                            <h4 class="mt-5">Custom Software Project Delivery</h4>
-                            <span class="text-muted">Private Client Project</span>
-                            <p class="lead py-2">Designed and delivered a tailored software solution using AI‑assisted development workflows to transform client requirements into a working digital tool with structured interface logic and practical usability.</p>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item text-center">
-                        <div class="testimonial-logo-wrapper shadow">
-                            <img src="Photos/Stance Store logo.png" alt="Stance Store Tuners" class="w-100 h-100">
-                        </div>
-                        <div class="client-feedback w-75 m-auto p-3">
-                            <h4 class="mt-5">Full Internal Management System</h4>
-                            <span class="text-muted">Stance Store Tuners</span>
-                            <p class="lead py-2">Built a complete internal management system covering sales pipelines, payment tracking, employee records, and real‑time inventory management — replacing manual processes with a structured digital solution that gave the entire team full operational visibility.</p>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item text-center">
-                        <div class="testimonial-logo-wrapper shadow">
-                            <img src="Photos/Eilaaf logo.png" alt="Eilaaf Law Firm" class="w-100 h-100">
-                        </div>
-                        <div class="client-feedback w-75 m-auto p-3">
-                            <h4 class="mt-5">Brand, Design System & Website</h4>
-                            <span class="text-muted">Eilaaf Law Firm &middot; <a href="https://eilaaflawfirm.com" target="_blank" rel="noopener noreferrer">eilaaflawfirm.com</a></span>
-                            <p class="lead py-2">Designed the brand and design system and built the firm's bilingual Arabic–English website — 15 pages from a dependency‑free static generator, with scroll‑driven motion, online booking, and Lighthouse scores of 99–100 across performance, accessibility, best practices, and SEO.</p>
-                        </div>
-                    </div>
+        <!-- CONTACT -->
+        <section id="contact" class="section contact">
+            <div class="contact__panel">
+                <h2 class="contact__title">Need a system built,<br>or a car?</h2>
+                <p class="contact__lede">Either way, the first meeting is the same. Tell me what you're trying to do.</p>
+                <div class="contact__actions">
+                    <a class="btn btn--primary" href="mailto:azaghloul206@gmail.com">azaghloul206@gmail.com</a>
+                    <a class="btn btn--ghost" href="tel:+201092472433">+20 109 247 2433</a>
+                    <a class="btn btn--ghost" href="https://www.linkedin.com/in/azaghloul206/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
                 </div>
-                <button class="carousel-control-prev border-0" type="button" data-target="#carouselExampleIndicators" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></button>
-                <button class="carousel-control-next border-0" type="button" data-target="#carouselExampleIndicators" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></button>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="site-footer__inner">
-                <span class="site-footer__brand">Ahmad Zaghloul</span>
-                <p class="site-footer__copy">&copy; 2025 Ahmad Zaghloul &mdash; Front-End Developer building with AI</p>
-                <div class="site-footer__links">
-                    <a href="https://www.linkedin.com/in/azaghloul206/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="https://x.com/Psychopath206" target="_blank" rel="noopener noreferrer">X</a>
-                    <a href="https://www.instagram.com/ahmedzaghloul82/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                </div>
-            </div>
-        </div>
+    <footer class="footer">
+        <span>© 2026 Ahmad Zaghloul · Cairo</span>
+        <span class="footer__links">
+            <a href="https://www.linkedin.com/in/azaghloul206/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.instagram.com/ahmedzaghloul82/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.facebook.com/ahmed.h.zaghloul" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://x.com/Psychopath206" target="_blank" rel="noopener noreferrer">X</a>
+        </span>
     </footer>
 
-    <script src="js/jquery-3.5.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
