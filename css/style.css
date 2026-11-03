@@ -425,7 +425,7 @@ p { margin: 0; }
 }
 .stage__last {
   position: relative; display: block; margin-top: .06em;
-  font: 700 clamp(84px, min(18.5vw, 33svh), 300px)/.86 var(--display); letter-spacing: -.035em;
+  font: 700 clamp(84px, 18.5vw, 300px)/.86 var(--display); letter-spacing: -.035em;
   color: transparent;
   background: linear-gradient(180deg, var(--text) 0%, color-mix(in srgb, var(--text) 55%, transparent) 55%, color-mix(in srgb, var(--text) 6%, transparent) 100%);
   -webkit-background-clip: text; background-clip: text;
@@ -490,7 +490,7 @@ html[data-mode="showroom"] .stage__img--showroom { opacity: 1; transform: transl
 .stage__hud { display: flex; align-items: center; gap: 10px; font: 600 12px/1 var(--display); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
 
 .stage .gauges {
-  grid-area: gauges; align-self: end; margin: 0 0 28px; z-index: 2;
+  grid-area: gauges; align-self: center; margin: 0; z-index: 2;
   display: flex; justify-content: space-between; gap: 0; pointer-events: none;
 }
 .stage .gauge {
