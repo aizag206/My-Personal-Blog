@@ -182,7 +182,6 @@
   }
 
   /* ─── STAGE PARALLAX ───────────────────────────────────── */
-  var shots = document.querySelectorAll('.floor__shot[data-depth]');
   if (stage && !reduceMotion) {
     var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     var wide = window.matchMedia('(min-width: 901px)');
@@ -191,11 +190,6 @@
       ticking = false;
       var y = window.scrollY || 0;
       if (wide.matches && y < window.innerHeight * 1.2) stage.style.setProperty('--sy', y.toFixed(0));
-      Array.prototype.forEach.call(shots, function (el) {
-        var r = el.getBoundingClientRect();
-        var mid = r.top + r.height / 2 - window.innerHeight / 2;
-        el.style.setProperty('--shift', (mid * parseFloat(el.getAttribute('data-depth'))).toFixed(1) + 'px');
-      });
     };
     window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(paint); } }, { passive: true });
     paint();
