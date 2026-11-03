@@ -508,7 +508,7 @@ html[data-mode="showroom"] .stage__img--showroom { opacity: 1; transform: transl
 
 .stage .gauges {
   grid-area: gauges; align-self: center; margin: 0; z-index: 2;
-  position: relative; top: clamp(24px, 6svh, 64px);
+  position: relative; top: clamp(0px, calc((100svh - 760px) * .5 + 24px), 64px);   /* lower on tall screens, never onto the switch label */
   display: flex; justify-content: space-between; gap: 0; pointer-events: none;
 }
 .stage .gauge {
