@@ -270,6 +270,10 @@ p { margin: 0; }
 .timeline__title { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 14px; font: 700 22px/1.2 var(--display); }
 .timeline__org { font: 500 16px/1.2 var(--body); color: var(--muted); }
 .timeline__logo { height: 34px; width: auto; }
+.timeline__logo--stacked { height: 52px; }
+.timeline__logo[src$="logo-egy.png"] { height: 40px; }
+.timeline__logos { display: inline-flex; align-items: center; gap: 14px; }
+.timeline__sep { width: 1px; height: 34px; background: var(--line-2); }
 .timeline__what p, .timeline__what ul { margin-top: 10px; color: var(--muted); }
 .timeline__what ul { padding-left: 18px; display: grid; gap: 6px; }
 
