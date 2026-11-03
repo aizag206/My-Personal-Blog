@@ -67,9 +67,12 @@
                 </div>
 
                 <div class="stage__copy">
-                    <div class="mode" role="group" aria-label="Drive mode">
-                        <button type="button" class="mode__btn" data-set-mode="engineer" aria-pressed="true">Engineer</button>
-                        <button type="button" class="mode__btn" data-set-mode="showroom" aria-pressed="false">Showroom</button>
+                    <div class="modebox">
+                        <p class="modebox__label" aria-hidden="true">Drive mode <span class="modebox__hint">· tap to switch</span></p>
+                        <div class="mode is-hinting" role="group" aria-label="Drive mode">
+                            <button type="button" class="mode__btn" data-set-mode="engineer" aria-pressed="true"><svg class="mode__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6 2 12l6 6M16 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Engineer</button>
+                            <button type="button" class="mode__btn" data-set-mode="showroom" aria-pressed="false"><svg class="mode__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="2.2" fill="currentColor"/><path d="M3.5 10.5h6.3M14.2 10.5h6.3M12 14.2V21" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>Showroom</button>
+                        </div>
                     </div>
                     <p class="ignition__role">Software engineer <span class="dot">·</span> Automotive sales</p>
                     <p class="ignition__tagline" data-engineer="I turn slow, manual work into AI-powered software that runs itself." data-showroom="I sell cars the way I build software: listen first, find what the client actually needs, then close on it.">I turn slow, manual work into AI-powered software that runs itself.</p>

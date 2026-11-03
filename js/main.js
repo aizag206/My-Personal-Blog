@@ -110,10 +110,20 @@
 
   Array.prototype.forEach.call(modeButtons, function (b) {
     b.addEventListener('click', function () {
+      markModeUsed();
       var mode = b.getAttribute('data-set-mode');
       if (mode !== root.getAttribute('data-mode')) applyMode(mode, true);
     });
   });
+
+  function markModeUsed() {
+    var box = document.querySelector('.modebox');
+    var group = document.querySelector('.stage .mode');
+    if (box) box.classList.add('is-used');
+    if (group) group.classList.remove('is-hinting');
+    try { localStorage.setItem('az-mode-used', '1'); } catch (e) { /* ignore */ }
+  }
+  try { if (localStorage.getItem('az-mode-used') === '1') markModeUsed(); } catch (e) { /* ignore */ }
 
   var startMode = 'engineer';
   try { if (localStorage.getItem('az-mode') === 'showroom') startMode = 'showroom'; } catch (e) { /* ignore */ }

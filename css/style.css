@@ -487,7 +487,23 @@ html[data-mode="showroom"] .stage__img--showroom { opacity: 1; transform: transl
 .stage__ui > * { pointer-events: auto; }
 .stage__top { grid-area: top; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; animation: rise .8s .9s var(--ease) both; }
 .stage__top { justify-content: flex-end; }
-.stage__copy .mode { margin: 0 0 22px; }
+.stage__copy .modebox { margin: 0 0 22px; }
+.modebox__label { margin: 0 0 10px; font: 600 11px/1 var(--display); letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+.modebox__hint { color: var(--accent); transition: opacity .4s; }
+.modebox.is-used .modebox__hint { opacity: 0; }
+.stage .mode { position: relative; padding: 5px; border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 12%, transparent), 0 0 28px -6px color-mix(in srgb, var(--accent) 55%, transparent); }
+.stage .mode__btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; font-size: 14px; }
+.stage .mode__btn:not([aria-pressed="true"]) { color: var(--text); }
+.stage .mode__btn:not([aria-pressed="true"]):hover { background: var(--panel-2); color: var(--accent-2); }
+.mode__icon { width: 16px; height: 16px; flex: none; }
+.stage .mode.is-hinting::after {      /* pulse ring until the first switch */
+  content: ""; position: absolute; inset: -5px; border-radius: 999px; pointer-events: none;
+  border: 1.5px solid var(--accent); opacity: 0;
+  animation: mode-pulse 2.4s 2.2s ease-out infinite;
+}
+.stage .mode.is-hinting .mode__btn:not([aria-pressed="true"]) .mode__icon { animation: mode-nudge 2.4s 2.2s ease-in-out infinite; }
+@keyframes mode-pulse { 0% { opacity: .9; transform: scale(1); } 70%, 100% { opacity: 0; transform: scale(1.12, 1.35); } }
+@keyframes mode-nudge { 0%, 60%, 100% { transform: none; } 20% { transform: rotate(-35deg); } 40% { transform: rotate(25deg); } }
 .stage__hud { display: flex; align-items: center; gap: 10px; font: 600 12px/1 var(--display); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
 
 .stage .gauges {
@@ -529,7 +545,7 @@ html[data-mode="showroom"] .stage__img--showroom { opacity: 1; transform: transl
 
 @media (max-width: 900px) {
   /* mobile flow: mode switch, name, figure fill the first screen; HUD below */
-  .stage { display: flex; flex-direction: column; min-height: 0; padding-top: 136px; }
+  .stage { display: flex; flex-direction: column; min-height: 0; padding-top: 180px; }
   .stage__name { position: relative; top: auto; order: 0; transform: none; }
   .stage__last { font-size: 19vw; }
   .stage__first { font-size: 12px; top: -1.9em; }
@@ -537,13 +553,14 @@ html[data-mode="showroom"] .stage__img--showroom { opacity: 1; transform: transl
     position: relative; left: auto; bottom: auto; order: 1;
     margin: -10vw auto 0; height: min(92vw, 560px); transform: none;
   }
-  .stage__floor { bottom: auto; top: calc(136px + min(92vw, 560px) + 8vw); }
+  .stage__floor { bottom: auto; top: calc(180px + min(92vw, 560px) + 8vw); }
   .stage__ui {
     position: static; order: 2; min-height: 0; margin: 0;
     display: block; padding: 0 0 48px;
   }
   .stage__top { position: absolute; top: 80px; left: 0; right: 0; justify-content: center; }
-  .stage__copy .mode { position: absolute; top: 80px; left: 50%; transform: translateX(-50%); margin: 0; }
+  .stage__copy .modebox { position: absolute; top: 74px; left: 50%; transform: translateX(-50%); margin: 0; text-align: center; white-space: nowrap; }
+  .modebox__label { margin-bottom: 8px; }
   .stage__copy { animation: none; }   /* an animated parent would trap the absolutely placed switch */
   .stage__hud, .stage__scroll { display: none; }
   .stage .gauges { position: relative; top: auto; justify-content: center; gap: 12px; margin-top: -84px; }
