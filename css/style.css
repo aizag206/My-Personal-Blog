@@ -492,6 +492,7 @@ html[data-mode="showroom"] .stage__img--showroom { opacity: 1; transform: transl
 
 .stage .gauges {
   grid-area: gauges; align-self: center; margin: 0; z-index: 2;
+  position: relative; top: clamp(24px, 6svh, 64px);
   display: flex; justify-content: space-between; gap: 0; pointer-events: none;
 }
 .stage .gauge {
@@ -545,7 +546,7 @@ html[data-mode="showroom"] .stage__img--showroom { opacity: 1; transform: transl
   .stage__copy .mode { position: absolute; top: 80px; left: 50%; transform: translateX(-50%); margin: 0; }
   .stage__copy { animation: none; }   /* an animated parent would trap the absolutely placed switch */
   .stage__hud, .stage__scroll { display: none; }
-  .stage .gauges { position: relative; justify-content: center; gap: 12px; margin-top: -84px; }
+  .stage .gauges { position: relative; top: auto; justify-content: center; gap: 12px; margin-top: -84px; }
   .stage .gauge { width: 46%; max-width: 200px; }
   .stage__copy { max-width: none; margin-top: 28px; }
   .stage__status { margin-top: 24px; }
