@@ -487,7 +487,7 @@ html[data-mode="showroom"] .stage__img--showroom { opacity: 1; transform: transl
 .stage__ui > * { pointer-events: auto; }
 .stage__top { grid-area: top; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; animation: rise .8s .9s var(--ease) both; }
 .stage__top { justify-content: flex-end; }
-.stage__copy .modebox { margin: 0 0 22px; }
+.stage__copy .modebox { margin: 0 0 6px; }
 .modebox__label { margin: 0 0 10px; font: 600 11px/1 var(--display); letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
 .modebox__hint { color: var(--accent); transition: opacity .4s; }
 .modebox.is-used .modebox__hint { opacity: 0; }
