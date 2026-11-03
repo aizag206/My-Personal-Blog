@@ -32,42 +32,59 @@
 
     <main id="main">
 
-        <!-- IGNITION -->
-        <section id="ignition" class="ignition">
-            <div class="ignition__inner">
-                <div class="ignition__copy">
+        <!-- IGNITION: the stage -->
+        <section id="ignition" class="stage" aria-label="Introduction">
+            <div class="stage__bg" aria-hidden="true">
+                <span class="stage__spot"></span>
+                <span class="stage__floor"></span>
+            </div>
+
+            <h1 class="stage__name">
+                <span class="stage__last" data-text="Zaghloul"><span class="stage__first">Ahmad</span>Zaghloul</span>
+            </h1>
+
+            <figure class="stage__figure">
+                <img class="stage__img stage__img--engineer" src="img/stage-engineer.png" alt="Ahmad Zaghloul in a white shirt, smiling" width="638" height="1200" fetchpriority="high">
+                <img class="stage__img stage__img--showroom" src="img/stage-showroom.png" alt="" aria-hidden="true" width="742" height="1200">
+                <span class="stage__bracket stage__bracket--tl" aria-hidden="true"></span>
+                <span class="stage__bracket stage__bracket--tr" aria-hidden="true"></span>
+                <span class="stage__bracket stage__bracket--bl" aria-hidden="true"></span>
+                <span class="stage__bracket stage__bracket--br" aria-hidden="true"></span>
+            </figure>
+
+            <div class="stage__ui">
+                <div class="stage__top">
                     <div class="mode" role="group" aria-label="Drive mode">
                         <button type="button" class="mode__btn" data-set-mode="engineer" aria-pressed="true">Engineer</button>
                         <button type="button" class="mode__btn" data-set-mode="showroom" aria-pressed="false">Showroom</button>
                     </div>
-                    <h1 class="ignition__name">Ahmad<br>Zaghloul</h1>
+                    <p class="stage__hud" aria-hidden="true"><span class="led led--on"></span><span data-engineer="Engineer mode · systems online" data-showroom="Showroom mode · floor open">Engineer mode · systems online</span></p>
+                </div>
+
+                <div class="gauges">
+                    <div class="gauge" id="gauge-a"
+                         data-engineer='{"value":100,"max":100,"display":"100","label":"Lighthouse score","sub":"eilaaflawfirm.com"}'
+                         data-showroom='{"value":48,"max":60,"display":"48+","label":"Contracts closed","sub":"Dec 2024 – Mar 2026"}'></div>
+                    <div class="gauge" id="gauge-b"
+                         data-engineer='{"value":4,"max":5,"display":"4","label":"Products shipped","sub":"in real daily use"}'
+                         data-showroom='{"value":364,"max":400,"display":"364+","label":"Client meetings","sub":"high-ticket, multi-meeting"}'></div>
+                </div>
+
+                <div class="stage__copy">
                     <p class="ignition__role">Software engineer <span class="dot">·</span> Automotive sales</p>
                     <p class="ignition__tagline" data-engineer="I build the systems people run their work on, then I use them myself. A shop's books, a law firm's cases, a sales team's outreach." data-showroom="I sell cars the way I build software: listen first, find what the client actually needs, then close on it.">I build the systems people run their work on, then I use them myself. A shop's books, a law firm's cases, a sales team's outreach.</p>
-
-                    <ul class="status">
-                        <li><span class="led led--on" aria-hidden="true"></span><span class="status__k">On shift</span><span class="status__v">Geely Sales Consultant · Abou Ghaly Motors</span></li>
-                        <li><span class="led led--on led--alt" aria-hidden="true"></span><span class="status__k">After hours</span><span class="status__v">Building software</span></li>
-                    </ul>
-
                     <div class="cta">
                         <a class="btn btn--primary" href="https://drive.google.com/file/d/1dYoHQ-awI_teDz8wg38GTo1Q-53W18nK/view?usp=sharing" target="_blank" rel="noopener noreferrer">View my CV</a>
                         <a class="btn btn--ghost" href="#contact">Get in touch</a>
                     </div>
                 </div>
 
-                <div class="cluster">
-                    <figure class="cluster__photo">
-                        <img src="img/portrait.jpg" alt="Ahmad Zaghloul in a dark blazer, smiling" width="1100" height="1268">
-                    </figure>
-                    <div class="gauges">
-                        <div class="gauge" id="gauge-a"
-                             data-engineer='{"value":100,"max":100,"display":"100","label":"Lighthouse score","sub":"eilaaflawfirm.com"}'
-                             data-showroom='{"value":48,"max":60,"display":"48+","label":"Contracts closed","sub":"Dec 2024 – Mar 2026"}'></div>
-                        <div class="gauge" id="gauge-b"
-                             data-engineer='{"value":4,"max":5,"display":"4","label":"Products shipped","sub":"in real daily use"}'
-                             data-showroom='{"value":364,"max":400,"display":"364+","label":"Client meetings","sub":"high-ticket, multi-meeting"}'></div>
-                    </div>
-                </div>
+                <ul class="status stage__status">
+                    <li><span class="led led--on" aria-hidden="true"></span><span class="status__k">On shift</span><span class="status__v">Geely Sales Consultant · Abou Ghaly Motors</span></li>
+                    <li><span class="led led--on led--alt" aria-hidden="true"></span><span class="status__k">After hours</span><span class="status__v">Building software</span></li>
+                </ul>
+
+                <a class="stage__scroll" href="#drive" aria-label="Scroll to the lineup"><span></span></a>
             </div>
         </section>
 
@@ -163,6 +180,13 @@
                 <div class="readout"><span class="readout__v">#2</span><span class="readout__k">Of four closers</span></div>
             </div>
             <p class="readouts__note">Documented record, Dec 2024 – Mar 2026. The true totals are higher.</p>
+
+            <div class="floor" aria-label="Photos from the showroom floor">
+                <figure class="floor__shot" data-depth="0.06"><img src="img/floor-1.jpg" alt="Ahmad in the driver's seat of a Mercedes-Benz G-Class at night" width="1100" height="825" loading="lazy"></figure>
+                <figure class="floor__shot" data-depth="-0.04"><img src="img/floor-2.jpg" alt="Ahmad at the wheel of a white Mercedes-Benz with the ambient lighting on" width="733" height="1100" loading="lazy"></figure>
+                <figure class="floor__shot" data-depth="0.08"><img src="img/floor-3.jpg" alt="Ahmad smiling from the driver's window of a grey car" width="825" height="1100" loading="lazy"></figure>
+                <p class="floor__caption">On the floor · Egytrade Automotive · 2023–2026</p>
+            </div>
 
             <ol class="timeline">
                 <li class="timeline__item timeline__item--now">

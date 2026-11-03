@@ -87,6 +87,8 @@
 
   /* ─── DRIVE MODE ─────────────────────────────────────────── */
   var tagline = document.querySelector('.ignition__tagline');
+  var hud = document.querySelector('.stage__hud [data-engineer]');
+  var stage = document.querySelector('.stage');
   var modeButtons = document.querySelectorAll('[data-set-mode]');
 
   function applyMode(mode, sweep) {
@@ -95,6 +97,13 @@
       b.setAttribute('aria-pressed', String(b.getAttribute('data-set-mode') === mode));
     });
     if (tagline && tagline.getAttribute('data-' + mode)) tagline.textContent = tagline.getAttribute('data-' + mode);
+    if (hud && hud.getAttribute('data-' + mode)) hud.textContent = hud.getAttribute('data-' + mode);
+    if (stage && sweep && !reduceMotion) {
+      // Headlight sweep across the surname on ignition and on every mode change.
+      stage.classList.remove('is-sweeping');
+      void stage.offsetWidth;
+      stage.classList.add('is-sweeping');
+    }
     gauges.forEach(function (g) { showGauge(g, mode, sweep); });
     try { localStorage.setItem('az-mode', mode); } catch (e) { /* storage unavailable */ }
   }
@@ -111,7 +120,10 @@
 
   // Let the zeroed needles paint first so the ignition sweep is visible.
   requestAnimationFrame(function () {
-    requestAnimationFrame(function () { applyMode(startMode, true); });
+    requestAnimationFrame(function () {
+      applyMode(startMode, true);
+      if (stage) { stage.classList.remove('is-sweeping'); setTimeout(function () { stage.classList.add('is-sweeping'); }, 900); }
+    });
   });
 
   /* ─── CAIRO CLOCK ────────────────────────────────────────── */
@@ -166,6 +178,37 @@
           node.classList.add('reveal');
           revealObserver.observe(node);
         });
+    }
+  }
+
+  /* ─── STAGE PARALLAX ───────────────────────────────────── */
+  var shots = document.querySelectorAll('.floor__shot[data-depth]');
+  if (stage && !reduceMotion) {
+    var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    var wide = window.matchMedia('(min-width: 901px)');
+    var ticking = false;
+    var paint = function () {
+      ticking = false;
+      var y = window.scrollY || 0;
+      if (wide.matches && y < window.innerHeight * 1.2) stage.style.setProperty('--sy', y.toFixed(0));
+      Array.prototype.forEach.call(shots, function (el) {
+        var r = el.getBoundingClientRect();
+        var mid = r.top + r.height / 2 - window.innerHeight / 2;
+        el.style.setProperty('--shift', (mid * parseFloat(el.getAttribute('data-depth'))).toFixed(1) + 'px');
+      });
+    };
+    window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(paint); } }, { passive: true });
+    paint();
+    if (fine) {
+      stage.addEventListener('pointermove', function (e) {
+        if (!wide.matches) return;
+        var r = stage.getBoundingClientRect();
+        stage.style.setProperty('--mx', (((e.clientX - r.left) / r.width) * 2 - 1).toFixed(3));
+        stage.style.setProperty('--my', (((e.clientY - r.top) / r.height) * 2 - 1).toFixed(3));
+      });
+      stage.addEventListener('pointerleave', function () {
+        stage.style.setProperty('--mx', '0'); stage.style.setProperty('--my', '0');
+      });
     }
   }
 })();
