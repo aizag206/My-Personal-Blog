@@ -54,10 +54,6 @@
 
             <div class="stage__ui">
                 <div class="stage__top">
-                    <div class="mode" role="group" aria-label="Drive mode">
-                        <button type="button" class="mode__btn" data-set-mode="engineer" aria-pressed="true">Engineer</button>
-                        <button type="button" class="mode__btn" data-set-mode="showroom" aria-pressed="false">Showroom</button>
-                    </div>
                     <p class="stage__hud" aria-hidden="true"><span class="led led--on"></span><span data-engineer="Engineer mode · systems online" data-showroom="Showroom mode · floor open">Engineer mode · systems online</span></p>
                 </div>
 
@@ -71,8 +67,12 @@
                 </div>
 
                 <div class="stage__copy">
+                    <div class="mode" role="group" aria-label="Drive mode">
+                        <button type="button" class="mode__btn" data-set-mode="engineer" aria-pressed="true">Engineer</button>
+                        <button type="button" class="mode__btn" data-set-mode="showroom" aria-pressed="false">Showroom</button>
+                    </div>
                     <p class="ignition__role">Software engineer <span class="dot">·</span> Automotive sales</p>
-                    <p class="ignition__tagline" data-engineer="I turn slow, manual work into software that runs itself." data-showroom="I sell cars the way I build software: listen first, find what the client actually needs, then close on it.">I turn slow, manual work into software that runs itself.</p>
+                    <p class="ignition__tagline" data-engineer="I turn slow, manual work into AI-powered software that runs itself." data-showroom="I sell cars the way I build software: listen first, find what the client actually needs, then close on it.">I turn slow, manual work into AI-powered software that runs itself.</p>
                     <div class="cta">
                         <a class="btn btn--primary" href="https://drive.google.com/file/d/1dYoHQ-awI_teDz8wg38GTo1Q-53W18nK/view?usp=sharing" target="_blank" rel="noopener noreferrer">View my CV</a>
                         <a class="btn btn--ghost" href="#contact">Get in touch</a>

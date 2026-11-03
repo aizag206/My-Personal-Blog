@@ -486,7 +486,8 @@ html[data-mode="showroom"] .stage__img--showroom { opacity: 1; transform: transl
 }
 .stage__ui > * { pointer-events: auto; }
 .stage__top { grid-area: top; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; animation: rise .8s .9s var(--ease) both; }
-.stage__top .mode { margin: 0; }
+.stage__top { justify-content: flex-end; }
+.stage__copy .mode { margin: 0 0 22px; }
 .stage__hud { display: flex; align-items: center; gap: 10px; font: 600 12px/1 var(--display); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
 
 .stage .gauges {
@@ -541,6 +542,8 @@ html[data-mode="showroom"] .stage__img--showroom { opacity: 1; transform: transl
     display: block; padding: 0 0 48px;
   }
   .stage__top { position: absolute; top: 80px; left: 0; right: 0; justify-content: center; }
+  .stage__copy .mode { position: absolute; top: 80px; left: 50%; transform: translateX(-50%); margin: 0; }
+  .stage__copy { animation: none; }   /* an animated parent would trap the absolutely placed switch */
   .stage__hud, .stage__scroll { display: none; }
   .stage .gauges { position: relative; justify-content: center; gap: 12px; margin-top: -84px; }
   .stage .gauge { width: 46%; max-width: 200px; }
